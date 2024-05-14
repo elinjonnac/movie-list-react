@@ -1,11 +1,31 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+import { useState } from "react";
+import AddMovieForm from "./components/AddMovieForm";
+import MovieList from "./components/MovieList";
+import Movie from "./components/MovieList/Movie";
+import Button from "./components/Button";
+//import Image from "next/image";
+//import styles from "./page.module.css";
+import styles from "./styles.css";
 
+
+export default function Home() {
+  const [movies, setMovies] = useState([]);
+
+  function updateMovies(newMovie) {
+    setMovies([...movies, newMovie]);
+  }
+
+  return (
+    <div className="main">
+      <h1>Min Filmlista</h1>
+      <AddMovieForm updateMovies={updateMovies} />
+      <MovieList movies={movies} />
+    </div>
+  )
+}
 
 /*
-Här ska homepage och react-grejer in!
-*/
-
 export default function Home() {
   return (
     <main className={styles.main}>
@@ -98,3 +118,4 @@ export default function Home() {
     </main>
   );
 }
+*/
