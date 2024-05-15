@@ -12,15 +12,27 @@ import styles from "./styles.css";
 export default function Home() {
   const [movies, setMovies] = useState([]);
 
+  //Funktion för att uppdatera array av filmer
   function updateMovies(newMovie) {
     setMovies([...movies, newMovie]);
+  }
+
+  //Funktion för att ta bort film
+  function removeMovie(index) {
+    const updatedMovies = [...movies];
+    //Ta bort film baserat på index
+    updatedMovies.splice(index, 1);
+    //Uppdatera state med ny array
+    setMovies(updatedMovies);
   }
 
   return (
     <div className="main">
       <h1>Min Filmlista</h1>
       <AddMovieForm updateMovies={updateMovies} />
-      <MovieList movies={movies} />
+      <MovieList movies={movies} onMovieRemove={removeMovie} />
+      <Button type="button" label="Sortera alfabetiskt" />
+      <Button type="button" label="Sortera efter betyg" />
     </div>
   )
 }

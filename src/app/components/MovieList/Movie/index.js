@@ -1,7 +1,6 @@
-import Button from "../../Button"
-
 function Movie({ title, rating, onRemove }) {
 
+    //Funktion för att visa stjärnor baserat på betyg
     function getRatingStars(rating) {
         const stars = [];
         for (let i = 0; i < rating; i++) {
@@ -17,8 +16,7 @@ function Movie({ title, rating, onRemove }) {
             <div>
                 {getRatingStars(rating)}
             </div>
-            <Button type="button" label="Ta bort" onClick={onRemove} />
-            <img src="/delete.png" alt="delete-icon" onclick={onRemove}></img>
+            <img src="/delete.png" alt="delete-icon" onClick={onRemove}></img>
         </div>
     );
 }
