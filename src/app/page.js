@@ -25,6 +25,9 @@ export default function Home() {
   )
 }
 
+//TODO
+//Buttons för sortering
+
 /*
 export default function Home() {
   return (

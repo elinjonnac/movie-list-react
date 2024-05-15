@@ -9,8 +9,6 @@ function AddMovieForm({ updateMovies }) {
         event.preventDefault();
         console.log('Title:', title);
         console.log('Rating:', rating);
-        //TODO: Skicka data till MovieList
-        //setMovies([...movies, { title, rating }]);
         updateMovies({ title, rating })
 
         //Nollställer formulärsfälten
