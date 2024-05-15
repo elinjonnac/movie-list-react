@@ -5,10 +5,9 @@ function AddMovieForm({ updateMovies }) {
     const [title, setTitle] = useState("");
     const [rating, setRating] = useState("");
 
+    //Funktion för hantering av när ett formulär skickas in
     function handleSubmit(event) {
         event.preventDefault();
-        console.log('Title:', title);
-        console.log('Rating:', rating);
         updateMovies({ title, rating })
 
         //Nollställer formulärsfälten
@@ -62,6 +61,5 @@ function AddMovieForm({ updateMovies }) {
       </div>
     );
 }
-
 
 export default AddMovieForm;

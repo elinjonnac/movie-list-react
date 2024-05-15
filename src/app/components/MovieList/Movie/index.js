@@ -4,7 +4,7 @@ function Movie({ title, rating, onRemove }) {
     function getRatingStars(rating) {
         const stars = [];
         for (let i = 0; i < rating; i++) {
-            stars.push(<img key={i} src="/star.png" alt="Star" />);
+            stars.push(<img key={i} src="/star.png" alt="Stjärna" />);
         }
         return stars;
     }
@@ -12,11 +12,10 @@ function Movie({ title, rating, onRemove }) {
     return (
         <div>
             <p>Title: {title}</p>
-            <p>Rating: {rating}</p>
             <div>
                 {getRatingStars(rating)}
             </div>
-            <img src="/delete.png" alt="delete-icon" onClick={onRemove}></img>
+            <img src="/delete.png" alt="Ta bort film" onClick={onRemove}></img>
         </div>
     );
 }
