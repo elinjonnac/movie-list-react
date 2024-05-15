@@ -1,9 +1,11 @@
+import Button from "../../Button"
 
-function Movie({title, rating}) {
+function Movie({ title, rating, onRemove }) {
     return (
         <div>
             <p>Title: {title}</p>
             <p>Rating: {rating}</p>
+            <Button type="button" label="Remove" onClick={onRemove} />
         </div>
     );
 }

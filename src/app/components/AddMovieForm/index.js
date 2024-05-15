@@ -1,5 +1,5 @@
 import { useState } from "react";
-//import Button from "../Button";
+import Button from "../Button";
 
 function AddMovieForm({ updateMovies }) {
     const [title, setTitle] = useState("");
@@ -58,7 +58,7 @@ function AddMovieForm({ updateMovies }) {
                     <option value="5">5</option>
                 </select>
         
-                <input type="submit" value="Spara film"/>
+                <Button type="submit" label="Spara film"/>
             </fieldset>
         </form>
       </div>
