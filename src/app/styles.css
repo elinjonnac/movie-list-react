@@ -1,3 +1,111 @@
-/* 
-Eventuellt lägga in styling via "styled-components"
-*/
+body {
+    background-color:rgb(223, 223, 223);
+}
+
+.container {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+.main {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2 {
+    display:flex;
+    justify-content:center;
+}
+
+/* Styling av formulär */
+
+#add-movie-form > fieldset {
+    display: flex;
+    flex-direction: column;
+    background-color:#b2c6c8;
+    border-radius:10px;
+    border-style:none;
+    min-width:20em;
+}
+
+#add-movie-form > fieldset > label {
+    padding: 0.5em 0 0.5em 0;
+}
+
+.form-control {
+    height:2em;
+    font-size: 18px;
+    border-radius:5px;
+    border-width: 1px;
+    border-color: #ededed;
+}
+
+/* Styling av filmlista */
+
+#movie-list {
+    min-width:20em;
+}
+
+.movie {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 0 1em 0 1em;
+    border-radius: 10px;
+    margin-top: 0.5em;
+}
+
+#movie-title {
+    flex: 1;
+    padding-right: 0.5em;
+}
+
+
+/* Styling av knappar */
+
+button {
+    margin: 0.5em 0 0.5em 0;
+    padding: 1em;
+    border-radius: 10px;
+    border-style:none;
+    font-size: 16px;
+}
+
+button[type="button"] {
+    background-color:rgb(133, 176, 185);
+}
+
+button:active {
+    background-color:rgb(110, 155, 135);
+}
+
+/* Styling av bilder */
+
+#star {
+    margin-left:auto;
+    max-width: 1.2em;
+}
+
+#delete-img {
+    margin-left:auto;
+    max-width: 1.8em;
+}
+
+/* Mobile */
+@media (min-width: 280px) and (max-width: 450px) {
+    .container {
+      grid-template-columns: 1fr;
+    }
+
+    .main {
+        width:100%;
+    }
+
+    button {
+        width:100%;
+    }
+
+}

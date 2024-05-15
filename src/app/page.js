@@ -52,12 +52,14 @@ export default function Home() {
   }
 
   return (
-    <div className="main">
-      <h1>Min Filmlista</h1>
-      <AddMovieForm updateMovies={updateMovies} />
-      <MovieList movies={movies} onMovieRemove={removeMovie} />
-      <Button type="button" label="Sortera alfabetiskt" onClick={sortByTitle} />
-      <Button type="button" label="Sortera efter betyg" onClick={sortByRating} />
+    <div className="container">
+      <div className="main">
+        <h1>Min Filmlista</h1>
+        <AddMovieForm updateMovies={updateMovies} />
+        <MovieList movies={movies} onMovieRemove={removeMovie} />
+        <Button type="button" label="Sortera alfabetiskt" onClick={sortByTitle} />
+        <Button type="button" label="Sortera efter betyg" onClick={sortByRating} />
+      </div>
     </div>
   )
 };

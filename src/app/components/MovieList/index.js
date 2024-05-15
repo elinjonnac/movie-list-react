@@ -9,7 +9,7 @@ function MovieList({ movies, onMovieRemove }) {
     */
 
     return (
-        <div>
+        <div id="movie-list">
             <h2>Inlagda filmer</h2>
             {movies.map((movie, index) => (
                 <Movie 
